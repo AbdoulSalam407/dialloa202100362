@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+    <!-- Lien vers le fichier CSS pour la mise en forme -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <form id="loginForm">
+            <label for="username">Identifiant :</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+    <!-- Lien vers le fichier JavaScript pour la validation et la redirection -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="../js/script.js" defer></script>
+</body>
+</html>

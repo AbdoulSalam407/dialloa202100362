@@ -1,0 +1,320 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    width: 100%;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+nav {
+    background-color: #00695c; /* Couleur principale plus vive */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: block;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    background-color: #004d40;
+    transform: translateY(-2px); /* Effet de soulèvement au survol */
+}
+
+nav .dropdown .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+nav .dropdown:hover .dropbtn {
+    background-color: #004d40;
+    transform: translateY(-2px);
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: opacity 0.4s ease;
+}
+
+nav .dropdown-content a {
+    color: #00695c;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+nav .dropdown-content a:hover {
+    background-color: #e0f2f1;
+    color: #004d40;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1; /* Affichage plus doux du menu déroulant */
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a, nav .dropdown .dropbtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+
+/* Modernisation du style */
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.product-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.product-image img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+}
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.product-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.product-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+.product-price, .product-seller, .product-contact, .product-email {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+.product-email a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.product-email a:hover {
+    text-decoration: underline;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-item {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: scale(1.05); /* Zoom léger sur l'image au survol */
+}
+
+footer {
+    background-color: #212121; /* Couleur de fond plus profonde */
+    color: #f5f5f5; /* Couleur de texte légèrement plus claire */
+    text-align: center;
+    padding: 25px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée pour plus de profondeur */
+    border-top: 4px solid #4CAF50; /* Ligne supérieure accentuée avec une couleur contrastante */
+    font-size: 0.9em; /* Taille du texte légèrement réduite pour un look élégant */
+    letter-spacing: 1px; /* Espacement des lettres pour une meilleure lisibilité */
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    color: #4CAF50; /* Liens dans le footer en vert contrastant */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #66bb6a; /* Changement de couleur au survol */
+}
+
+footer .social-icons {
+    margin-top: 15px;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: #f5f5f5;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #4CAF50;
+    transform: scale(1.1); /* Légère augmentation de la taille au survol */
+}
+
+
+form {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); /* Effet de focus élégant */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="submit"]:active {
+    background-color: #388e3c;
+    transform: scale(0.96); /* Effet de clic */
+}
+
+input[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4); /* Effet de focus */
+}
+

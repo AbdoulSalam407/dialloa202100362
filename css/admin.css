@@ -1,0 +1,116 @@
+.admin{
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        border-bottom: 2px solid #343a40;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        color: #343a40;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #errorMessage {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    th {
+        background-color: #3498db;
+    }
+}
+
+#contactsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+#contactsTable thead {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+#contactsTable th, #contactsTable td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+#contactsTable th {
+    font-weight: bold;
+}
+
+#contactsTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#contactsTable tbody tr:hover {
+    background-color: #e1e1e1;
+}
+
+#contactsTable td {
+    word-break: break-word;
+}

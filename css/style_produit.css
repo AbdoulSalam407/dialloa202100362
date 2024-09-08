@@ -1,0 +1,71 @@
+div.produit{
+    /* Styles généraux */
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f8f9fa;
+        color: #343a40;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    /* En-tête de la page */
+    h1 {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 2.5em;
+        color: #007bff;
+        font-weight: 700;
+    }
+
+    /* Liste des liens de produits */
+    ul {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Style des éléments de la liste */
+    ul li {
+        margin: 10px;
+        width: calc(50% - 20px); /* Deux colonnes */
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        overflow: hidden;
+    }
+
+    /* Style des liens */
+    ul li a {
+        display: block;
+        padding: 20px;
+        color: #343a40;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+    /* Effet de survol */
+    ul li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    ul li:hover a {
+        color: #007bff;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        ul li {
+            width: calc(100% - 20px); /* Une colonne sur écran plus petit */
+        }
+    }
+}

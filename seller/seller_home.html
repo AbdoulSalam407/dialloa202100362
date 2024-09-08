@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenJaba - Accueil Vendeur</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/vendeur.css">
+</head>
+<body>
+    <header>
+        <h1>SenJaba</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Catégories</a>
+                    <div class="dropdown-content">
+                        <a href="../categories/electronics.html">Électronique</a>
+                        <a href="../categories/clothing.html">Vêtements et accessoires</a>
+                        <a href="../categories/home_garden.html">Maison et Jardin</a>
+                        <a href="../categories/beauty_health.html">Beauté et santé</a>
+                        <a href="../categories/sports_leisure.html">Sport et loisir</a>
+                    </div>
+                </li>
+                <li><a href="../produits/produit.html">Produits</a></li>
+                <li><a href="../login/login.html">Connexion</a></li>
+                <li><a href="seller_home.html">Vendeur</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="vendeur">   
+        
+        <section id="sellerInfo">
+            <h2>Présentation du Vendeur</h2>
+            <div class="seller-details">
+                <p><strong>Nom :</strong> <span id="sellerFullName"></span></p>
+                <p><strong>Email :</strong> <span id="sellerEmail"></span></p>
+                <p><strong>Nom d'utilisateur :</strong> <span id="sellerUsername"></span></p>
+                <p><strong>Rôle :</strong> <span id="sellerRole"></span></p>
+            </div>
+        </section>
+    
+        <h2 id="listeProd">Liste des Produits</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Nom</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Prix</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="listeProduits">
+                <!-- La liste des produits sera insérée ici -->
+            </tbody>
+        </table>
+        <h1>Gestion des Produits</h1>
+
+        <button onclick="showProductForm()">Ajouter un produit</button>
+
+        <div id="sectionProduit" class="hidden">
+            <form id="productForm" onsubmit="return ajouterProduit()">
+                <label for="productCategory">Catégorie:</label>
+                <input type="text" id="productCategory" required><br><br>
+
+                <label for="productName">Nom:</label>
+                <input type="text" id="productName" required><br><br>
+
+                <label for="productImage">Image (URL):</label>
+                <input type="text" id="productImage" required><br><br>
+
+                <label for="productDescription">Description:</label>
+                <textarea id="productDescription" required></textarea><br><br>
+
+                <label for="productPrice">Prix:</label>
+                <input type="text" id="productPrice" required><br><br>
+
+                <label for="productType">Type:</label>
+                <input type="text" id="productType" required><br><br>
+
+                <button type="submit" id="nouveauProduit">Ajouter</button>
+                <button type="button" onclick="fermerFormProduit()">Annuler</button>
+            </form>
+        </div>
+
+        
+    </div>
+    <script src="../js/products.js"></script>
+</body>
+</html>
